@@ -1,4 +1,6 @@
 # Сайт Федерации Го Санкт-Петербурга
+[![Deploy to Server](https://github.com/M1r7/go-spb/actions/workflows/deploy.yml/badge.svg)](https://github.com/M1r7/go-spb/actions/workflows/deploy.yml)
+
 Сайт доступен по адресу [https://spb.gofederation.ru](https://spb.gofederation.ru)
 
 ## Для контрибьюторов
