@@ -1,0 +1,45 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/Checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+
+      - name: Build
+        run: hugo build --minify
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          echo "${{ secrets.DEPLOY_KNOWN_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy
+        run: |
+          SSH_USER="${{ secrets.DEPLOY_USER }}"
+          SSH_HOST="${{ secrets.DEPLOY_HOST }}"
+          DEPLOY_PATH="${{ secrets.DEPLOY_PATH }}"
+
+          rsync -avzc \
+            --delete \
+            ./public/ \
+            $SSH_USER@$SSH_HOST:$DEPLOY_PATH
+
+      - name: Cleanup
+        run: rm -rf ~/.ssh
