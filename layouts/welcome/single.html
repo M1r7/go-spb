@@ -2,10 +2,19 @@
 <div id="bg-anim"></div>
 <div class="welcome__container">
   <div class="welcome__header">
-    <img class="welcome__logo" src="/img/SPFGoLogo.svg">
+    <a href="/"><img class="welcome__logo" src="/img/SPFGoLogo.svg"></a>
     <div>Полезные ссылки</div>
   </div>
   <div class="welcome__links">
+    {{$announces := where .Site.RegularPages "Type" "posts"}}
+    {{$announces := where $announces ".Params.announce" "!=" nil}}
+    {{$announces1 := where $announces ".Params.announce_until" ">=" now}}
+    {{$announces2 := where $announces ".Params.announce_until" "==" nil}}
+    {{$announces := $announces1 | union $announces2}}
+    {{range $announces}}
+    <a class="welcome__link" href="{{.RelPermalink}}">{{.Params.announce}}</a>
+    {{end}}
+
     {{range .Params.links}}
     <a class="welcome__link" href="{{.href}}" target="_blank">
       <div class="welcome__link_icon">

@@ -1,0 +1,16 @@
+{{ define "main" }}
+<header>
+  <div class="header__title container">
+    <img class="header__title_icon" src="/img/SPFGoLogo.svg">
+    <span class="header__title_text">Новости Го в <span class="__nowrap">Санкт-Петербурге</span></span>
+  </div>
+</header>
+<div class="container content">
+  {{$posts := where site.RegularPages "Type" "posts" }}
+  <div>
+    {{range $index, $_ := $posts }}
+      {{partial "post" .}}
+    {{end}}
+  </div>
+</div>
+{{end}}

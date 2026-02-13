@@ -1,17 +1,18 @@
 :root {
   --background-color: #181830;
   --text-color: rgba(255, 255, 255, 0.85);
+  --header-logo-size: 65px;
+  --header-v-padding: 8px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 * {
   color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 body {
   background-color: var(--background-color);
-}
-a {
-  text-decoration: none;
 }
 #bg-anim {
   position: fixed;
@@ -65,6 +66,7 @@ a {
   align-items: center;
   gap: 16px;
   padding: 16px;
+  text-decoration: none;
   --background-color: #FFFFFF20;
   background-color: var(--background-color);
   border: 1px solid #FFFFFF20;
@@ -104,4 +106,52 @@ a {
 .welcome__link_text__sub {
   font-size: 1em;
   --text-color: rgba(255, 255, 255, 0.60);
+}
+header {
+  background: #FFFFFF20;
+  border-bottom: 1px solid #FFFFFF20;
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  backdrop-filter: blur(8px);
+}
+.content {
+  margin-top: calc(var(--header-v-padding) * 2 + var(--header-logo-size) + 2em)
+}
+.header__title {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 8px 0;
+}
+.header__title_icon {
+  width: var(--header-logo-size);
+  height: var(--header-logo-size);
+}
+.header__title_text {
+  font-size: 2em;
+}
+.container {
+  width: min(calc(100vw - 64px), 800px);
+  margin-left: auto;
+  margin-right: auto;
+}
+article {
+  font-size: 1.2em;
+  & h1, & h2, & h3, & p, & ul {
+    margin-bottom: 1em;
+  }
+  & ul {
+    list-style-position: inside;
+  }
+  & p, & ul {
+    --text-color: rgba(255, 255, 255, 0.70);
+  }
+}
+article:nth-child(n+2) {
+  border-top: 2px dashed #FFFFFF20;
+  padding: 48px 0;
+}
+
+.__nowrap {
+  white-space: nowrap;
 }
