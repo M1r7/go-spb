@@ -20,6 +20,11 @@ announce_until = 2026-03-01
 ### /content/welcome.md — Лендинговая страница
 Страница расположена по постоянному адресу [https://spb.gofederation.ru/welcome](https://spb.gofederation.ru/welcome). Cсылка печатается на флаерах и других физических носителях.
 
+Рекомендованные варианты QR кодов:\
+![image](https://raw.githubusercontent.com/M1r7/go-spb/refs/heads/master/static/img/qr_code.svg)
+![image](https://raw.githubusercontent.com/M1r7/go-spb/refs/heads/master/static/img/qr_code_no_logo.svg)
+
+
 Эта страница имеет специальный шаблон, и основная часть генерации реализована в нём, а не в контенте. Во front matter определён список "полезных ссылок" в формате
 ```yaml
 links:
