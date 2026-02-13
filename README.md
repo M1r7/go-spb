@@ -18,7 +18,7 @@ announce_until = 2026-03-01
 - Если определено свойство `announce` то ссылка на новость (с текстом из `announce`) попадает на страницу `/welcome`. При этом если `announce_until` определено то анонс будет висеть до указанной даты, а если не определено то бессрочно
 
 ### /content/welcome.md — Лендинговая страница
-Страница расположена по постоянному адресу [https://spb.gofederation.ru/welcome](https://spb.gofederation.ru/welcome). Cсылка печатается на флаерах и других физических носителях.
+Страница расположена по постоянному адресу [https://spb.gofederation.ru/welcome/](https://spb.gofederation.ru/welcome). Cсылка печатается на флаерах и других физических носителях.
 
 Рекомендованные варианты QR кодов:\
 ![image](https://raw.githubusercontent.com/M1r7/go-spb/refs/heads/master/static/img/qr_code.svg)
