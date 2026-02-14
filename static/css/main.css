@@ -148,6 +148,17 @@ article {
   & p, & ul {
     --text-color: rgba(255, 255, 255, 0.70);
   }
+  & a {
+    --text-color: rgba(255, 255, 255, 0.85);
+    &:hover {
+      --text-color: rgba(255, 255, 255, 1);
+    }
+    &::after {
+      content: var(--trailing-icon);
+      font-family: "Font Awesome 6 Brands";
+    }
+    &[href^="https://t.me/"] { --trailing-icon: ' \f2c6'; }
+  }
 }
 article:nth-child(n+2) {
   border-top: 2px dashed #FFFFFF20;
