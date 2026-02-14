@@ -22,6 +22,14 @@ jobs:
       - name: Build
         run: hugo build --minify
 
+      - name: Precompress
+        run: |
+          find public -type f \( -iname "*.html" -o -iname "*.js" -o -iname "*.css" -o -iname "*.svg" \) -print0 | \
+          xargs -0 -P4 -I{} sh -c '
+            brotli -f -q 11 "{}" --output="{}.br"
+            gzip -k -f -9 -n "{}"
+          '
+
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh
