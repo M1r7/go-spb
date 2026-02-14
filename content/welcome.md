@@ -1,4 +1,5 @@
 ---
+title: Полезные ссылки
 layout: welcome
 url: /welcome
 links:

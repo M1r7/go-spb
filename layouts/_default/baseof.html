@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="/css/main.css">
   {{partial "lazy_css" "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}}
-  <title>{{.Site.Title}}</title>
+  <title>{{if ne .RelPermalink "/" }}{{.Title}} — {{end}}{{.Site.Title}}</title>
 {{ partial "favicons" }}
 </head>
 <body>
