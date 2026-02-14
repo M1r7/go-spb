@@ -67,9 +67,6 @@ body {
   border-radius: 12px;
   padding: 16px;
 }
-.welcome__block_title {
-  font-weight: bolder;
-}
 .welcome__link {
   display: flex;
   flex-direction: row;
