@@ -26,9 +26,10 @@ jobs:
         run: |
           find public -type f \( -iname "*.html" -o -iname "*.js" -o -iname "*.css" -o -iname "*.svg" \) -print0 | \
           xargs -0 -P4 -I{} sh -c '
-            brotli -f -q 11 "{}" --output="{}.br"
-            gzip -k -f -9 -n "{}"
-          '
+            file="$1"
+            brotli -f -q 11 "$file" --output="$file.br"
+            gzip -k -f -9 -n "$file"
+          ' sh {}
 
       - name: Configure SSH
         run: |
