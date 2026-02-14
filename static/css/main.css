@@ -60,17 +60,22 @@ body {
   gap: 16px;
   margin-bottom: 52px;
 }
+.welcome__block, .welcome__link {
+  --background-color: #FFFFFF20;
+  background-color: var(--background-color);
+  border: 1px solid #FFFFFF20;
+  border-radius: 12px;
+  padding: 16px;
+}
+.welcome__block_title {
+  font-weight: bolder;
+}
 .welcome__link {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  padding: 16px;
   text-decoration: none;
-  --background-color: #FFFFFF20;
-  background-color: var(--background-color);
-  border: 1px solid #FFFFFF20;
-  border-radius: 12px;
   transition: all 0.3s ease;
   &:hover {
     --background-color: #FFFFFF30;
@@ -150,6 +155,12 @@ article {
 article:nth-child(n+2) {
   border-top: 2px dashed #FFFFFF20;
   padding: 48px 0;
+}
+.schedule {
+  margin-top: 0.8em;
+  display: grid;
+  column-gap: 0.4em;
+  grid-template-columns: max-content auto;
 }
 .not_found {
   height: 100vh;
