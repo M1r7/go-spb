@@ -186,6 +186,12 @@ article:nth-child(n+2) {
   }
 }
 
+.__flip > img {
+  transition: all 0.3s ease-in-out;
+}
+.__flip:hover > img {
+  transform: scaleY(-1);
+}
 .__nowrap {
   white-space: nowrap;
 }
