@@ -6,6 +6,7 @@
   {{range .Params.Css}}{{partial "fingerprint_css" .}}{{end}}
   {{partial "lazy_css" "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"}}
   <title>{{if ne .RelPermalink "/" }}{{.Title}} — {{end}}{{.Site.Title}}</title>
+  {{if .Description}}<meta name="description" content="{{.Description}}">{{end}}
   <link rel="canonical" href="{{.Permalink}}">
 {{ partial "favicons" }}
 </head>
