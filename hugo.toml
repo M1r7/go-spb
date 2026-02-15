@@ -1,4 +1,4 @@
 baseURL = 'https://spb.gofederation.ru/'
 languageCode = 'ru-ru'
 title = 'Го в Санкт-Петербурге'
-disableKinds = ["rss", "sitemap", "taxonomy"]
+disableKinds = ["rss", "taxonomy"]
