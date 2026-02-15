@@ -17,4 +17,6 @@ links:
   href: https://t.me/+T5-71hL1tBY5NzVi
   icon: fa-brands fa-telegram
   icon2: fa-regular fa-comment
+css:
+- css/welcome.css
 ---
