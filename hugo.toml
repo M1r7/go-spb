@@ -2,3 +2,6 @@ baseURL = 'https://spb.gofederation.ru/'
 languageCode = 'ru-ru'
 title = 'Го в Санкт-Петербурге'
 disableKinds = ["rss", "taxonomy"]
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_']

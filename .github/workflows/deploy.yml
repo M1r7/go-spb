@@ -20,7 +20,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
-        run: hugo build --minify
+        run: HUGO_YANDEX_METRIKA_COUNTER="${{ secrets.HUGO_YANDEX_METRIKA_COUNTER }}" hugo build --minify
 
       - name: Precompress
         run: |

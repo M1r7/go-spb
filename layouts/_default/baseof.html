@@ -9,6 +9,7 @@
   {{if .Description}}<meta name="description" content="{{.Description}}">{{end}}
   <link rel="canonical" href="{{.Permalink}}">
 {{ partial "favicons" }}
+{{partial "ym_counter"}}
 </head>
 <body>
 {{block "main" .}}{{end}}
