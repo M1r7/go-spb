@@ -1,0 +1,2 @@
+{{$src := resources.Get .src | minify | fingerprint "md5"}}
+<script type="text/javascript" src="{{$src.RelPermalink}}"{{if .defer}} defer{{end}}></script>

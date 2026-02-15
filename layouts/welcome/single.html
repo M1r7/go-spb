@@ -43,5 +43,5 @@
   </div>
 </div>
 {{ range .Site.Data.welcome.links.countries }}-{{.}}-{{ end }}
-<script defer type="text/javascript" src="/js/background.js"></script>
+{{partial "fingerprint_js" (dict "src" "js/background.js" "defer" true)}}
 {{ end }}
