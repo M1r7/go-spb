@@ -31,7 +31,7 @@
       </div>{{end}}
     </a>
     {{end}}
-    <div class="welcome__block">
+    <a class="welcome__link" href="/clubs/central_club/">
       <div class="welcome__link_icon">
         <i class="fa-regular fa-calendar"></i>
       </div>
@@ -41,7 +41,7 @@
           {{partial "central_club_schedule"}}
         </div>
       </div>
-    </div>
+    </a>
   </div>
 </div>
 {{ range .Site.Data.welcome.links.countries }}-{{.}}-{{ end }}

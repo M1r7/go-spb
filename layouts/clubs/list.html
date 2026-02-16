@@ -1,0 +1,11 @@
+{{define "main"}}
+<div class="container">
+  <article>
+    <h1>Го-клубы в Санкт-Петербурге</h1>
+    {{range .Pages}}
+      <h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+      {{.Params.Address}}
+    {{end}}
+  </article>
+</div>
+{{end}}
