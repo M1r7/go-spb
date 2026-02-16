@@ -1,0 +1,29 @@
+.not_found {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.not_found__404 {
+  font-size: min(30vh, 15em);
+  color: #FFFFFF60;
+}
+.not_found__text {
+  font-size: min(8vh, 2em);
+  text-align: center;
+}
+.not_found__links {
+  display: flex;
+  font-size: 1.2em;
+  margin-top: 1em;
+  column-gap: 0.4em;
+  & * {
+    &::before {
+      content: '[\00a0';
+    }
+    &::after {
+      content: '\00a0]';
+    }
+  }
+}

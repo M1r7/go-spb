@@ -2,6 +2,13 @@
 <div class="not_found">
   <div class="not_found__404">404</div>
   <div class="not_found__text">Иными словами страница не найдена</div>
-  <div class="not_found__links"><a href="/">На главную</a></div>
+  <div class="not_found__links">
+    <a href="/">На главную</a>
+    <a href="/clubs/">Клубы</a>
+  </div>
 </div>
+{{end}}
+
+{{define "extra_head"}}
+{{partial "fingerprint_css" "css/404.css"}}
 {{end}}

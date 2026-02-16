@@ -10,6 +10,7 @@
   <link rel="canonical" href="{{.Permalink}}">
 {{ partial "favicons" }}
 {{partial "ym_counter"}}
+{{block "extra_head" .}}{{end}}
 </head>
 <body>
 {{block "main" .}}{{end}}
