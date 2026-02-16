@@ -43,7 +43,7 @@ header {
   padding: var(--header-v-padding) 0;
 }
 @media screen and (max-width: 520px) {
-  .header__title_icon { display: none; }
+  .header__home_link, .header__title_icon { display: none; }
 }
 .header__title {
   height: calc(var(--header-v-padding) * 2 + var(--header-logo-size));
