@@ -1,0 +1,18 @@
+<header>
+  <div class="header container">
+    {{if eq .RelPermalink "/"}}
+      <img class="header__title_icon" src="{{(resources.Get "img/SPFGoLogo.svg" | minify).RelPermalink}}" alt="Федерация Го Санкт-Петербурга">
+    {{else}}
+      <a href="/" class="header__home_link">
+        <img class="header__title_icon" src="{{(resources.Get "img/SPFGoLogo.svg" | minify).RelPermalink}}">
+      </a>
+    {{end}}
+    <div class="header__title">
+      <span class="header__title_text">Го в <span class="__nowrap">Санкт-Петербурге</span></span>
+      <div class="header__navs">
+        <a href="/"{{if or (hasPrefix .RelPermalink "/posts/") (eq .RelPermalink "/")}} class="active"{{end}}>Новости</a>
+        <a href="/clubs/"{{if hasPrefix .RelPermalink "/clubs/"}} class="active"{{end}}>Клубы</a>
+      </div>
+    </div>
+  </div>
+</header>

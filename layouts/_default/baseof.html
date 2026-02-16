@@ -13,6 +13,13 @@
 {{block "extra_head" .}}{{end}}
 </head>
 <body>
-{{block "main" .}}{{end}}
+{{if ne .RelPermalink "/welcome/" }}
+  {{partial "header" .}}
+  <div class="content">
+    {{block "main" .}}{{end}}
+  </div>
+{{else}}
+  {{block "main" .}}{{end}}
+{{end}}
 </body>
 </html>

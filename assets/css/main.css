@@ -24,18 +24,49 @@ header {
 .content {
   margin-top: calc(var(--header-v-padding) * 2 + var(--header-logo-size) + 2em)
 }
-.header__title {
+.header {
   display: flex;
   gap: 24px;
   align-items: center;
-  padding: 8px 0;
+}
+.header__home_link {
+  height: calc(var(--header-v-padding) * 2 + var(--header-logo-size));
 }
 .header__title_icon {
   width: var(--header-logo-size);
   height: var(--header-logo-size);
+  padding: var(--header-v-padding) 0;
+}
+.header__title {
+  height: calc(var(--header-v-padding) * 2 + var(--header-logo-size));
+  display: flex;
+  flex-direction: column;
 }
 .header__title_text {
+  padding-top: var(--header-v-padding);
   font-size: 2em;
+  flex-grow: 1;
+}
+.header__navs {
+  height: 1.8em;
+  display: flex;
+  column-gap: 1.4em;
+}
+.header__navs a {
+  font-size: 1.2em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.header__navs a.active {
+  color: #FFFFFF;
+  padding: 0 1.2em;
+  background: rgba(255, 255, 255, 0.2);
+  border-top: 1px solid #FFFFFF20;
+  border-left: 1px solid #FFFFFF20;
+  border-right: 1px solid #FFFFFF20;
+  border-top-left-radius: 0.4em;
+  border-top-right-radius: 0.4em;
 }
 .container {
   width: min(calc(100vw - 64px), 800px);
@@ -44,33 +75,34 @@ header {
 }
 article {
   font-size: 1.2em;
-  & h1, & h2, & h3, & p, & ul, & figure {
-    margin-bottom: 1em;
-  }
-  & ul {
-    list-style-position: inside;
-  }
-  & p, & ul {
-    --text-color: rgba(255, 255, 255, 0.70);
-  }
-  & figure {
-    max-width: 100%;
-    & img {
-      max-width: 100%;
-    }
-  }
-  & a {
-    --text-color: rgba(255, 255, 255, 0.85);
-    &:hover {
-      --text-color: rgba(255, 255, 255, 1);
-    }
-    &::after {
-      content: var(--trailing-icon);
-      font-family: "Font Awesome 6 Brands";
-    }
-    &[href^="https://t.me/"] { --trailing-icon: ' \f2c6'; }
-  }
+  margin-bottom: 2em;
 }
+article * {
+  margin-top: 1em;
+}
+article ul {
+  list-style-position: inside;
+}
+article p, article ul {
+  --text-color: rgba(255, 255, 255, 0.70);
+}
+article figure {
+  max-width: 100%;
+}
+article figure img {
+  max-width: 100%;
+}
+article a {
+  --text-color: rgba(255, 255, 255, 0.85);
+}
+article a:hover {
+  --text-color: rgba(255, 255, 255, 1);
+}
+article a::after {
+  content: var(--trailing-icon);
+  font-family: "Font Awesome 6 Brands";
+}
+article a[href^="https://t.me/"] { --trailing-icon: ' \f2c6'; }
 article:nth-child(n+2) {
   border-top: 2px dashed #FFFFFF20;
   padding: 48px 0;
