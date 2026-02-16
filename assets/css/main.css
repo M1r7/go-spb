@@ -44,7 +44,7 @@ header {
 }
 article {
   font-size: 1.2em;
-  & h1, & h2, & h3, & p, & ul {
+  & h1, & h2, & h3, & p, & ul, & figure {
     margin-bottom: 1em;
   }
   & ul {
@@ -52,6 +52,12 @@ article {
   }
   & p, & ul {
     --text-color: rgba(255, 255, 255, 0.70);
+  }
+  & figure {
+    max-width: 100%;
+    & img {
+      max-width: 100%;
+    }
   }
   & a {
     --text-color: rgba(255, 255, 255, 0.85);
