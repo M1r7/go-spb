@@ -2,8 +2,8 @@
 <div id="bg-anim"></div>
 <div class="welcome__container">
   <div class="welcome__header">
-    <a href="/" class="__flip">
-      <img class="welcome__logo" src="{{(resources.Get "img/SPFGoLogo.svg" | minify).RelPermalink}}" alt="Федерация Го Сенкт-Петербурга">
+    <a href="/">
+      {{ readFile "assets/img/SPFGoLogoFull.svg" | safeHTML }}
     </a>
     <div>Полезные ссылки</div>
   </div>

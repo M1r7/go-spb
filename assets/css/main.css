@@ -134,12 +134,6 @@ article .date {
   grid-template-columns: max-content auto;
 }
 
-.__flip > img {
-  transition: all 0.3s ease-in-out;
-}
-.__flip:hover > img {
-  transform: scaleY(-1);
-}
 .__nowrap {
   white-space: nowrap;
 }

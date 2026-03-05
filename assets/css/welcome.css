@@ -93,3 +93,25 @@
   font-size: 1em;
   --text-color: rgba(255, 255, 255, 0.60);
 }
+.welcome__container svg.logo {
+  --text-color: #D8D8D8;
+  width: min(400px, calc(100vw - 24px));
+  height: min(calc(400px / 3.64), calc((100vw - 24px) / 3.64));
+}
+.welcome__container svg.logo:hover {
+  --text-color: #FFF;
+  width: min(400px, calc(100vw - 24px));
+  height: min(calc(400px / 3.64), calc((100vw - 24px) / 3.64));
+}
+.welcome__container svg.logo .logo__logo {
+  transition: all 0.3s ease-in-out;
+}
+.welcome__container svg.logo:hover .logo__logo {
+  transform: translateY(100%) scaleY(-1);
+}
+.welcome__container .logo__logo {
+  fill: var(--text-color);
+}
+.welcome__container .logo__text {
+  fill: var(--text-color);
+}
