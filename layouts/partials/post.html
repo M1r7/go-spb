@@ -1,3 +1,9 @@
 <article>
+  {{if (.Site.Store.Get "inList")}}
+    <h1><a href="{{.RelPermalink}}">{{.Title}}</a></h1>
+  {{else}}
+    <h1>{{.Title}}</h1>
+  {{end}}
   {{.Content}}
+  <div class="date">{{.Date | time.Format ":date_long"}}</div>
 </article>

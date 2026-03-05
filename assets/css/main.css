@@ -111,9 +111,21 @@ article a::after {
   font-family: "Font Awesome 6 Brands";
 }
 article a[href^="https://t.me/"] { --trailing-icon: ' \f2c6'; }
+article h1 a {
+  text-decoration: none;
+}
+article h1 a:hover {
+  text-decoration: underline;
+}
 article:nth-child(n+2) {
   border-top: 2px dashed #FFFFFF20;
   padding: 48px 0;
+}
+article .date {
+  text-align: right;
+  font-style: italic;
+  font-size: 0.8em;
+  --text-color: rgba(255, 255, 255, 0.60);
 }
 .schedule {
   margin-top: 0.8em;

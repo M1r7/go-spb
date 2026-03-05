@@ -2,9 +2,11 @@
 <div class="container">
   {{$posts := where site.RegularPages "Type" "posts" }}
   <div>
+    {{.Site.Store.Set "inList" true}}
     {{range $index, $_ := $posts }}
       {{partial "post" .}}
     {{end}}
+    {{.Site.Store.Delete "inList"}}
   </div>
 </div>
 {{end}}
