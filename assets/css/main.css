@@ -85,7 +85,7 @@ article {
   font-size: 1.2em;
   margin-bottom: 2em;
 }
-article * {
+article > * {
   margin-top: 1em;
 }
 article ul {
