@@ -106,7 +106,7 @@
 .welcome__container svg.logo .logo__logo {
   transition: all 0.3s ease-in-out;
 }
-.welcome__container svg.logo:hover .logo__logo {
+.welcome__container svg.logo:hover .logo__logo, .welcome__container svg.logo:active .logo__logo {
   transform: translateY(100%) scaleY(-1);
 }
 .welcome__container .logo__logo {
