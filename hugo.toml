@@ -1,7 +1,7 @@
 baseURL = 'https://spb.gofederation.ru/'
 [languages]
   [languages.ru_RU]
-    languageCode = 'ru_RU'
+    languageCode = 'ru'
     languageName = 'Русский'
     weight = 1
 title = 'Го в Санкт-Петербурге'
