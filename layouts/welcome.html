@@ -14,7 +14,16 @@
     {{$announces2 := where $announces ".Params.announce_until" "==" nil}}
     {{$announces := $announces1 | union $announces2}}
     {{range $announces}}
-    <a class="welcome__link" href="{{.RelPermalink}}">{{.Params.announce}}</a>
+    <a class="welcome__link" href="{{.RelPermalink}}">
+      <div class="welcome__link_icon">
+        <i class="fa-solid fa-bullhorn"></i>
+      </div>
+      <div class="welcome__link_text">
+        <span class="welcome__link_text__sup">
+          {{.Params.announce}}
+        </span>
+      </div>
+    </a>
     {{end}}
 
     {{range .Params.links}}
