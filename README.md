@@ -29,7 +29,7 @@ announce_until = 2026-03-01
 ```yaml
 links:
 - name: Telegram канал
-  comment: Расписание центрального Го клуба и другие новости
+  comment: Расписание центрального Го-клуба и другие новости
   href: https://t.me/GameGoSPb
   icon: fa-brands fa-telegram
   icon2: fa-solid fa-bullhorn

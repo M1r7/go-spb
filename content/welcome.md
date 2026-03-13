@@ -9,7 +9,7 @@ links:
   href: https://vk.com/spb_game_of_go
   icon: fa-brands fa-vk
 - name: Telegram канал
-  comment: Расписание центрального Го клуба и другие новости
+  comment: Расписание центрального Го-клуба и другие новости
   href: https://t.me/GameGoSPb
   icon: fa-brands fa-telegram
   icon2: fa-solid fa-bullhorn
