@@ -5,7 +5,6 @@
     <a href="/" aria-label="На главную страницу сайта ФГСПБ">
       {{ readFile "assets/img/SPFGoLogoFull.svg" | safeHTML }}
     </a>
-    <div>Полезные ссылки</div>
   </div>
   <div class="welcome__links">
     {{$announces := where .Site.RegularPages "Type" "posts"}}
@@ -26,20 +25,39 @@
     </a>
     {{end}}
 
-    {{range .Params.links}}
-    <a class="welcome__link" href="{{.href}}" target="_blank">
+    <a class="welcome__link" href="https://vk.com/spb_game_of_go" target="_blank">
       <div class="welcome__link_icon">
-        <i class="{{.icon}}"></i>
+        <i class="fa-brands fa-vk"></i>
       </div>
       <div class="welcome__link_text">
-        <span class="welcome__link_text__sup">{{.name}}</span>
-        <span class="welcome__link_text__sub">{{.comment}}</span>
+        <span class="welcome__link_text__sup">ВКонтакте</span>
+        <span class="welcome__link_text__sub">Федерация Го в Санкт-Петербурге</span>
       </div>
-      {{if .icon2}}<div class="welcome__link_icon">
-        <i class="{{.icon2}}"></i>
-      </div>{{end}}
     </a>
-    {{end}}
+    <a class="welcome__link" href="https://t.me/GameGoSPb" target="_blank">
+      <div class="welcome__link_icon">
+        <i class="fa-brands fa-telegram"></i>
+      </div>
+      <div class="welcome__link_text">
+        <span class="welcome__link_text__sup">Telegram канал</span>
+        <span class="welcome__link_text__sub">Расписание центрального <span class="__nowrap">го-клуба</span> и другие новости</span>
+      </div>
+      <div class="welcome__link_icon">
+        <i class="fa-solid fa-bullhorn"></i>
+      </div>
+    </a>
+    <a class="welcome__link" href="https://t.me/+T5-71hL1tBY5NzVi" target="_blank">
+      <div class="welcome__link_icon">
+        <i class="fa-brands fa-telegram"></i>
+      </div>
+      <div class="welcome__link_text">
+        <span class="welcome__link_text__sup">Группа в Telegram</span>
+        <span class="welcome__link_text__sub">Чат канала</span>
+      </div>
+      <div class="welcome__link_icon">
+        <i class="fa-regular fa-comment"></i>
+      </div>
+    </a>
     <a class="welcome__link" href="/clubs/central_club/">
       <div class="welcome__link_icon">
         <i class="fa-regular fa-calendar"></i>
