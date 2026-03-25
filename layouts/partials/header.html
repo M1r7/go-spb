@@ -12,6 +12,7 @@
       <div class="header__navs">
         <a href="/"{{if or (hasPrefix .RelPermalink "/posts/") (eq .RelPermalink "/")}} class="active"{{end}}>Новости</a>
         <a href="/clubs/"{{if hasPrefix .RelPermalink "/clubs/"}} class="active"{{end}}>Клубы</a>
+        <a href="/welcome/">Ссылки</a>
         <a href="/contact/"{{if hasPrefix .RelPermalink "/contact/"}} class="active"{{end}}>Контакты</a>
       </div>
     </div>
