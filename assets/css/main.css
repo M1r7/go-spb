@@ -118,6 +118,7 @@ article a::after {
   font-family: "Font Awesome 6 Brands";
 }
 article a[href^="https://t.me/"]:not(.__noicon) { --trailing-icon: ' \f2c6'; }
+article a[href^="https://vk.com/"]:not(.__noicon) { --trailing-icon: ' \f189'; }
 article h1 a {
   text-decoration: none;
 }
