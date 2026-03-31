@@ -34,16 +34,23 @@ header {
   gap: 1em;
   align-items: center;
 }
-.header__home_link {
-  height: calc(var(--header-v-padding) * 2 + var(--header-logo-size));
-}
 .header__title_icon {
   width: var(--header-logo-size);
   height: var(--header-logo-size);
   padding: var(--header-v-padding) 0;
 }
+a.header__title_icon:hover .logo {
+  --text-color: rgba(255, 255, 255, 1);
+}
+.header__title_icon > svg {
+  width: var(--header-logo-size);
+  height: var(--header-logo-size);
+}
+.header__title_icon .logo {
+  fill: var(--text-color);
+}
 @media screen and (max-width: 520px) {
-  .header__home_link, .header__title_icon { display: none; }
+  .header__title_icon { display: none; }
 }
 .header__title {
   height: calc(var(--header-v-padding) * 2 + var(--header-logo-size));

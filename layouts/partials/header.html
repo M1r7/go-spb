@@ -1,10 +1,12 @@
 <header>
   <div class="header container">
     {{if eq .RelPermalink "/"}}
-      <img class="header__title_icon" src="{{(resources.Get "img/SPFGoLogo.svg" | minify).RelPermalink}}" alt="Федерация Го Санкт-Петербурга">
+      <div class="header__title_icon">
+        {{ readFile "assets/img/SPFGoLogo.svg" | safeHTML }}
+      </div>
     {{else}}
-      <a href="/" class="header__home_link">
-        <img class="header__title_icon" src="{{(resources.Get "img/SPFGoLogo.svg" | minify).RelPermalink}}">
+      <a href="/" class="header__title_icon">
+        {{ readFile "assets/img/SPFGoLogo.svg" | safeHTML }}
       </a>
     {{end}}
     <div class="header__title">
