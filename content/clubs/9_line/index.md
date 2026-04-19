@@ -6,8 +6,8 @@ address = '9-я линия В.О., д.8'
 
 Для детей от 7 лет.
 
-[vk.ru/playgo9](https://vk.ru/playgo9)\
+[vk.com/playgo9](https://vk.com/playgo9)\
 Бесплатно\
 9-я линия В.О., д.8
 
-Руководитель Решетняк Стефания Васильевна [vk.com/stefaniastefanos](https://vk.ru/stefaniastefanos)
+Руководитель Решетняк Стефания Васильевна [vk.com/stefaniastefanos](https://vk.com/stefaniastefanos)
