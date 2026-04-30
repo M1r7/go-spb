@@ -1,0 +1,4 @@
+{{if hasPrefix .Destination "tel:"}}
+<i class="fa-solid fa-phone"></i>
+{{end}}
+<a href="{{ .Destination | safeURL }}">{{ .Text }}</a>
