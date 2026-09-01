@@ -1,6 +1,7 @@
 +++
 date = 2026-09-01
 title = 'Занятия для детей в центре «Охта»'
+weight = 3
 +++
 
 {{< figure src="banner.jpg" >}}

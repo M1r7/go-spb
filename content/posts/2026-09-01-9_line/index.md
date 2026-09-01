@@ -1,6 +1,7 @@
 +++
 date = 2026-09-01
 title = 'Занятия для детей на 9 линии ВО'
+weight = 2
 +++
 
 {{< figure src="banner.jpg" >}}
