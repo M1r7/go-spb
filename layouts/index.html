@@ -3,7 +3,7 @@
   {{$posts := where site.RegularPages "Type" "posts" }}
   <div>
     {{.Site.Store.Set "inList" true}}
-    {{range $index, $_ := $posts.ByDate.Reverse.ByWeight }}
+    {{range $index, $_ := $posts.ByWeight }}
       {{partial "post" .}}
     {{end}}
     {{.Site.Store.Delete "inList"}}
